@@ -1,0 +1,120 @@
+// ### Primary
+$orange: hsl(25, 97%, 53%);
+
+// ### Neutral
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: #000000;
+  color: $white;
+  display: flex;
+  height: 100vh;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+
+  section {
+    background-image: linear-gradient(
+      180deg,
+      $darkBlue,
+      $veryDarkBlue
+    );
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 36px;
+    max-width: 400px;
+
+    &.sectionRate {
+      .iconWrap {
+        width: 40px;
+        height: 40px;
+        background-color: $darkBlue;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        img {
+          height: 20px;
+          width: auto;
+          background-color: $darkBlue;
+        }
+      }
+    }
+
+    &.sectionThankyou {
+        text-align: center;
+        display: none;
+     
+    }
+
+    p {
+      color: $lightGrey;
+      margin-top: 0;
+
+      &.thankyouSelection {
+        background-color: $darkBlue;
+        color: $orange;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 16px;
+      }
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      margin-top: 26px;
+
+      p {
+        background-color: $darkBlue;
+        border-radius: 50%;
+        margin-bottom: 0;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+
+        &.selected {
+            background-color: $lightGrey;
+            color: $white;
+        }
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      &.submit {
+        background-color: $orange;
+        color: $white;
+        border-radius: 20px;
+        text-align: center;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+      }
+    }
+  }
+}
